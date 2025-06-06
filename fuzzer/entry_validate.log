@@ -1,0 +1,20 @@
+=== UART VALIDATOR LOG ===
+[*] Warte auf Boot-Prompt …
+[*] UART prompt erkannt!
+[TEST] telemetry   : OK
+  Rx: b'\r\n\r\ntuning2 done\r\nset CLKTUN=(1<<12)|(1<<6)|(1<<5)\r\nset RD_SEL=(1<<5)\r\n'
+[TEST] cmos_day    : OK
+  Rx: b'\r\n\r\ntuning2 done\r\n[11:7]:(0F,0D,09)\r\n[4:0]:(15,09,19)\r\nresult:(0B,15)\r\nCLKTUN=15F9\r\nt=8D17FD0\r\nBU sdram tuning over\r\n\xffid =9b init\r\n FlashID=0x684014 SectorSize=0x1000 TotalSize=0x100000\r\nsizeof(tCTRL_FLASH_MAP)=0x400                                      \r\nsizeof(tFLASH_USERSETTING_MAP)=0x1000                                      \r\nboard installer : installing ad-channel...->ok.\r\nboard installer : finish.total : 1\r\nnvfs init : mem = 16\r\nnvfs init : 0x41600,0x87a00\r\nEnergy sample num=128 addr=0x2044368\r\nLullabyBaseAddress(0x41608)\r\nBlock A Success !\r\nBlock B Success !\r\n Both of two block is pass !\r\nUSERSETTING: DATA CORRUPTED !!! LOAD DEFAULT !!!\r\nVxL=0x27a,0x161,0xc4,0x6c,0x1\r\nSL=0xd6,0x189,0'
+[TEST] cmos_night  : OK
+  Rx: b"x2d1,0x500,0xffff,0xffff,0xffff,0xffff,0xffff\r\nVol=0xb0,0xb0,0xb0,0xb0,0xb0,0xb0,0xb0\r\nLVol=0x5,0x5,0x5,0x5,0x5,0x5,0x5\r\ng_su32NetId=0x2f390036 g_su8SlaveId=0x1 AuxID=0x0 \r\ng_u32RfSerialId=0xf3900369 g_u32RfSecID1=0xf3900361 g_u32RfSecID2=0xf3900365\r\nID=0\r\nReg24=0x7F, Reg2D=0x24\r\nRF open success\r\nID=aabbccdd\r\nID=aabbccdd\r\nID=2f390036\r\nID=2f390036\r\nPU-CAP=0x8\r\nBU-CAP=0x60\r\nD_TH=0x67\r\nN_TH=0x43\r\n\r\nM481BUEU3764\r\nPlease key 'y' or 'Y' to execute ATE mode.\r\nPlease key 'd' or 'D' to display Debug Info.\r\nPlease key 'c' or 'C' to enable Day mode CMOS dynamic setting.\r\nPlease key 'n' or 'N' to enable Night mode CMOS dynamic setting.\r\nPlease key 'g' or 'G' to enable get CMOS current setting.\r\nPlease key 'j' or 'J' to enable Set JPG current setting.\r\n"
+[TEST] ate_mode    : OK
+  Rx: b'\x1bA'
+[TEST] boot_loader : OK
+  Rx: b'\x1bR'
+
+=== VALIDATION SUMMARY ===
+telemetry   : OK
+cmos_day    : OK
+cmos_night  : OK
+ate_mode    : OK
+boot_loader : OK
